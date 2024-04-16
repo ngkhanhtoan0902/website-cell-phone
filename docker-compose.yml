@@ -5,8 +5,8 @@ services:
       context: .
       dockerfile: ./docker/Dockerfile
       args:
-        DOMAIN: 'doctopus.biz'
-    container_name: doctopus_framework
+        DOMAIN: 'cellphoneX.biz'
+    container_name: cellphoneX_framework
     working_dir: /var/www/html
     ports:
       - "80:80"
@@ -22,7 +22,7 @@ services:
 
   mysql:
     image: mariadb:10
-    container_name: doctopus_mysql
+    container_name: cellphoneX_mysql
     ports:
       - "3308:3306"
     volumes:
@@ -32,7 +32,7 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: doctopus_phpmyadmin
+    container_name: cellphoneX_phpmyadmin
     restart: always
     ports:
       - '8080:80'
