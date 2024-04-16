@@ -1,0 +1,123 @@
+.options {
+    .stage {
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    &__title {
+      margin-bottom: 88px;
+      text-align: center;
+      @include d {
+        margin-bottom: 56px;
+      }
+      @include m {
+        margin-bottom: 24px;
+      }
+    }
+    &__preview {
+      margin: 0 -25px 110px -20px;
+      @include d {
+        margin-bottom: 95px;
+      }
+      @include m {
+        margin: 0 -60px 48px -60px;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+    &__wrap {
+      @include m {
+        position: relative;
+      }
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+      @include t {
+        flex-wrap: nowrap;
+        margin: 0;
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        &:before,
+        &:after {
+          content: "";
+          flex-shrink: 0;
+          width: 32px;
+          height: 1px;
+        }
+      }
+      @include m {
+        margin: 0 -24px;
+        &:before,
+        &:after {
+          width: 24px;
+        }
+      }
+    }
+    &__item {
+      flex: 0 0 calc(25% - 24px);
+      width: calc(25% - 24px);
+      margin: 0 12px;
+      @include t {
+        flex: 0 0 250px;
+        width: 250px;
+        margin: 0;
+      }
+    }
+    &__item2 {
+      flex: 0 0 23%;
+      width: 23%;
+      margin: 0 12px;
+      @include t {
+        flex: 0 0 250px;
+        width: 250px;
+        margin: 0;
+      }
+    }
+    &__icon {
+      display: flex;
+      align-items: center;
+      height: 48px;
+      margin-bottom: 24px;
+      font-size: 0;
+    }
+    &__info {
+      max-width: 100%;
+      margin-bottom: 24px;
+      @include m {
+        max-width: 90%;
+      }
+    }
+    &__text {
+      position: relative;
+      max-width: 100%;
+      padding-top: 28px;
+      color: $gray;
+      @include m {
+        max-width: 90%;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80px;
+        height: 4px;
+        background: rgba($secondary, .15);
+      }
+    }
+  }
+  #product {
+    .options__text {
+      padding-top: 0;
+      &::before {
+        display: none;
+      }
+    }
+  }

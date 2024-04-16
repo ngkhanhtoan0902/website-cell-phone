@@ -1,0 +1,32 @@
+.badge {
+  font-size: 12px;
+  padding: 5px 15px;
+  font-weight: 500;
+  border-radius: 5px;
+  text-align: center;
+  width: fit-content;
+
+  &.badge-sm {
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 600;
+    padding: 0px 8px;
+  }
+
+  &.rounded {
+    border-radius: 16px !important;
+  }
+
+  &.badge-success {
+    background-color: #D3FAC8;
+  }
+
+  &.badge-warning {
+    background-color: #FFB700;
+  }
+
+  &.badge-danger {
+    background-color: #F8826A;
+  }
+
+}

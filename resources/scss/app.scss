@@ -1,0 +1,36 @@
+@import "./_variables";
+@import "./core/_typography";
+// plugins
+
+
+@import "./_common";
+@import "./_spacing";
+@import "./animation";
+
+@import "./components/home";
+@import "./components/_header";
+@import "./components/_footer";
+@import "./components/_main";
+@import "./components/_advantages";
+@import "./components/_review";
+@import "./components/_offer";
+@import "./components/_comment";
+@import "./components/_questions";
+@import "./components/_options";
+@import "./components/_pricing";
+@import "./components/_about";
+@import "./components/_affiliate";
+@import "./components/_contact";
+@import "./components/_privacy";
+@import "./components/_blog&article";
+@import "./components/_casestudy";
+@import "./components/_testimonial";
+@import "./components/_webinar";
+@import "./components/_landing_page";
+@import "./components/_form";
+@import "./components/_material";
+@import "./components/_glossary";
+
+@import "./_skeleton";
+@import "./_badge";
+@import "./_scrollbar";

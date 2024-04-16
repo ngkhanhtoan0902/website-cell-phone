@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /login
+Disallow: /logout
+Disallow: /testimonial/get
+Disallow: /api/services/posts/get-latest
+Disallow: /api/*
+Disallow: /rcms/*
+Sitemap: https://writerzen.net/sitemap.xml

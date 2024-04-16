@@ -1,0 +1,282 @@
+.affiliate {
+  &__user {
+    max-width: 262px;
+    margin: 0 auto;
+    color: $black;
+  }
+
+  &__subuser {
+    box-shadow: -6px 6px 20px rgba(91, 111, 163, 0.15);
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 33.25px;
+
+    @include m {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  &__title {
+    font-size: 35px;
+    line-height: 46.55px;
+    font-weight: 700;
+    margin-top: 115px;
+
+    @include t {
+      margin-top: 0;
+      font-size: 33px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 30px;
+
+    @include s {
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+
+  &__preview {
+    margin-right: -110px;
+
+    @include d {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__btn {
+    width: fit-content;
+
+    @include t {
+      margin: 0 auto;
+    }
+  }
+
+  &__level {
+    @include t {
+      display: none;
+    }
+  }
+
+  &__levelmobile {
+    display: none;
+
+    @include t {
+      display: block;
+    }
+  }
+
+  &__bgright {
+    @include d {
+      display: none !important;
+    }
+  }
+
+  &__card {
+    &-shadow {
+      background: #ffffff;
+      -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      position: relative;
+      
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      min-width: 0;
+      margin-top: 30px;
+      height: calc(100% - 30px);
+      padding: 40px;
+      word-wrap: break-word;
+
+      &.quote {
+          padding: 15px 30px;
+      
+          @include m {
+            padding: 15px 20px;
+          }
+        }
+    }
+
+    @include m {
+      padding: 20px;
+    }
+
+  }
+
+  &__border {
+    &-partner {
+      width: 80px;
+      height: 4px;
+      background: rgba(91, 111, 163, 0.15);
+    }
+  }
+
+  &__space {
+    @include m {
+      gap: 40px;
+    }
+  }
+
+  &__exclusive {
+    &-subtitle {
+      max-width: 640px;
+    }
+
+  }
+
+  &-title-brief {
+    font-size: 26px;
+
+    @include m {
+      font-size: 18px;
+    }
+  }
+
+  &-margin {
+    margin-top: 30px;
+
+    @include m {
+      margin-top: 0px;
+    }
+  }
+  
+
+  &-continuous {
+    min-height: 788px;
+
+    @include m {
+      min-height: 585px;
+    }
+  }
+
+  &-gap-70 {
+    gap: 70px;
+
+    @include m {
+      gap: 20px;
+    }
+  }
+
+  &-general-subtitle {
+    max-width: 740px;
+
+    @include m {
+      max-width: 340px;
+    }
+  }
+}
+
+.affstep {
+  max-width: 598px;
+  height: 127px;
+  border: 1px dashed #D4E3FE;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-sizing: border-box;
+  z-index: 999;
+
+  &:not(:last-child) {
+    margin-bottom: 80px;
+  }
+
+  &:not(:nth-child(2)) {
+    opacity: .5;
+  }
+
+  &:first-child .number__inside {
+    border: 5px solid #4AC229;
+  }
+}
+
+.affstep__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 127px;
+  height: 127px;
+  border-radius: 20px;
+  box-shadow: 0px 3px 50px #1434B4;
+  background: #FFFFFF;
+  transform: translate(-1px, -1px);
+  position: relative;
+  padding: 24px;
+}
+
+.affstep {
+  &:not(:last-child) .affstep__number::before {
+    position: absolute;
+    content: "";
+    height: 80px;
+    width: 2px;
+    background: #D4E3FE;
+    left: calc(50% - 2px);
+    bottom: -80px;
+  }
+
+  &:nth-child(2) .affstep__number::before {
+    opacity: .5;
+  }
+}
+
+.affstep__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 355px;
+  margin-left: 25px;
+  height: 100%;
+  color: #fff;
+  font-weight: 700;
+  font-size: 17px;
+  word-wrap: break-word;
+}
+
+.number__inside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 5px solid #E4ECFA;
+  box-sizing: border-box;
+}
+
+.affstep__icon {
+  max-width: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#affiliate {
+  .owl-carousel .owl-nav.disabled {
+    display: none !important;
+  }
+
+  @include s {
+    .owl-carousel .owl-dots.disabled {
+      display: flex;
+    }
+  }
+
+  .owl-dot {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  .owl-dot.active {
+    background: $primary;
+  }
+}

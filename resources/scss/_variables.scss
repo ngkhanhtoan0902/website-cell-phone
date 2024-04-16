@@ -1,0 +1,122 @@
+// media queries
+@mixin w {
+	@media only screen and (max-width: "1440px") {
+		@content;
+	}
+}
+
+@mixin x {
+	@media only screen and (max-width: "1440px") {
+		@content;
+	}
+}
+
+@mixin d {
+	@media only screen and (max-width: "1200px") {
+		@content;
+	}
+}
+
+@mixin t {
+	@media only screen and (max-width: "1024px") {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media only screen and (max-width: "992px") {
+		@content;
+	}
+}
+
+@mixin m {
+	@media only screen and (max-width: "768px") {
+		@content;
+	}
+}
+
+@mixin a {
+	@media only screen and (max-width: "639px") {
+		@content;
+	}
+}
+
+@mixin s {
+	@media only screen and (max-width: "475px") {
+		@content;
+	}
+}
+
+// fonts
+@mixin fi {
+	font-family: "Source Sans 3";
+}
+
+//Primary Color
+$primary: #066AFF;
+$primary-lighter: #88CFFF;
+$primary-light: #50B2FF;
+$primary-dark: #0F47BE;
+$primary-darker: #11285A;
+$primary-super-light: #f5f6fd;
+$primary-ultra-light: #eff5ff;
+$primary-middle: #e4ecfa;
+$primary-medium: #bfc7da;
+
+//Secondary Color
+$secondary: #1890FF;
+$secondary-lighter: #D0F2FF;
+$secondary-light: #74CAFF;
+$secondary-dark: #0C53B7;
+$secondary-darker: #04297A;
+
+//Success Color
+$success: #54D62C;
+$success-lighter: #E9FCD4;
+$success-light: #AAF27F;
+$success-dark: #229A16;
+$success-darker: #08660D;
+$success-super-light: #d3fac8;
+
+//Warning Color
+$warning: #FFC107;
+$warning-lighter: #FFF7CD;
+$warning-light: #FFE16A;
+$warning-dark: #B78103;
+$warning-darker: #7A4F01;
+
+//Danger Color
+$danger: #FF4842;
+$danger-lighter: #FFE7D9;
+$danger-light: #FFA48D;
+$danger-dark: #B72136;
+$danger-darker: #7A0C2E;
+
+
+$white: #ffffff;
+$black: #161C24;
+$gray: #4f4f4f;
+$gray-medium: #cfcfcf;
+$gray-light: #f2f2f2;
+$hover: #f5faff;
+ 
+$primary-hover: #1d47d7;
+$secondary-hover: #42548c;
+$success-hover: #31a61d;
+$warning-hover: #db8200;
+
+$primary-active: #1434b4;
+$secondary-active: #2d3d75;
+$success-active: #1c8b14;
+$warning-active: #b76600;
+
+/* Shadow  */
+$shadowColor: $secondary;
+$shadowLight: 0px 4px 8px 0px rgba(22, 28, 36, 0.16);
+$shadowMedium: 0px 4px 8px 0px rgba(22, 28, 36, 0.10);                         
+$shadowHeavy: 0px 4px 8px 0px rgba(22, 28, 36, 0.10);                          
+
+$shadowOpacity: 0.11;
+$shadow: 0px 3px 20px rgba($shadowColor, $shadowOpacity);
+// $shadowLight: 0px 3px 10px rgba($shadowColor, $shadowOpacity);
+$shadowBold: 0px 20px 20px rgba(91, 111, 163, 0.3);

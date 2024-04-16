@@ -1,0 +1,169 @@
+@for $i from 1 through 24 {
+    $k: $i * 5;
+
+    .gap-#{$k} {
+        gap: #{$k}px !important;
+    }
+
+    @include m {
+        .gap-#{$k} {
+            gap: calc($k * 3 / 4)px !important;
+        }
+    }
+
+    .mb-#{$k},
+    .my-#{$k} {
+        margin-bottom: #{$k}px !important;
+    }
+
+    .mt-#{$k},
+    .my-#{$k} {
+        margin-top: #{$k}px !important;
+    }
+
+    .me-#{$k},
+    .mx-#{$k} {
+        margin-right: #{$k}px !important;
+    }
+
+    .ms-#{$k},
+    .mx-#{$k} {
+        margin-left: #{$k}px !important;
+    }
+
+    .pb-#{$k},
+    .py-#{$k} {
+        padding-bottom: #{$k}px !important;
+    }
+
+    .pt-#{$k},
+    .py-#{$k} {
+        padding-top: #{$k}px !important;
+    }
+
+    .pe-#{$k},
+    .px-#{$k} {
+        padding-right: #{$k}px !important;
+    }
+
+    .ps-#{$k},
+    .px-#{$k} {
+        padding-left: #{$k}px !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    $k: $i * 8;
+
+    .gap-#{$k} {
+        gap: #{$k}px !important;
+    }
+
+    @include m {
+        .gap-#{$k} {
+            gap: calc($k / 2)px !important;
+        }
+    }
+
+    .mb-#{$k},
+    .my-#{$k} {
+        margin-bottom: #{$k}px !important;
+    }
+
+    .mt-#{$k},
+    .my-#{$k} {
+        margin-top: #{$k}px !important;
+    }
+
+    .me-#{$k},
+    .mx-#{$k} {
+        margin-right: #{$k}px !important;
+    }
+
+    .ms-#{$k},
+    .mx-#{$k} {
+        margin-left: #{$k}px !important;
+    }
+
+    .pb-#{$k},
+    .py-#{$k} {
+        padding-bottom: #{$k}px !important;
+    }
+
+    .pt-#{$k},
+    .py-#{$k} {
+        padding-top: #{$k}px !important;
+    }
+
+    .pe-#{$k},
+    .px-#{$k} {
+        padding-right: #{$k}px !important;
+    }
+
+    .ps-#{$k},
+    .px-#{$k} {
+        padding-left: #{$k}px !important;
+    }
+}
+
+@include t {
+    .px-sm-20 {
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+    }
+
+    .pt-120,
+    .py-120 {
+        padding-top: 60px !important;
+    }
+
+    .pb-120,
+    .py-120 {
+        padding-bottom: 60px !important;
+    }
+
+    .mt-120,
+    .my-120 {
+        margin-top: 40px !important;
+    }
+
+    .mb-120,
+    .my-120,
+    .mb-110,
+    .my-110,
+    .mb-105,
+    .my-105,
+    .mb-80,
+    .my-80 {
+        margin-bottom: 40px !important;
+    }
+
+    .mb-70,
+    .my-70 {
+        margin-bottom: 20px !important;
+    }
+
+    .mt-60,
+    .my-60 {
+        margin-top: 20px !important;
+    }
+
+    .mb-60,
+    .my-60 {
+        margin-bottom: 20px !important;
+    }
+
+    .pb-80,
+    .py-80,
+    .pb-100,
+    .py-100 {
+        padding-bottom: 48px !important;
+    }
+
+    .pt-80,
+    .py-80,
+    .pt-100,
+    .py-100 {
+        padding-top: 48px !important;
+    }
+}

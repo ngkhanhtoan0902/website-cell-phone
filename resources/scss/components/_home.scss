@@ -1,0 +1,262 @@
+.mainapp-visual {
+	animation: rotateVisual 1s ease;
+	transform-origin: center bottom;
+	padding-top: 180px;
+	margin-bottom: 100px;
+
+	@include d {
+		padding-top: 60px;
+		margin-bottom: 0;
+	}
+
+	@include t {
+		padding-top: 40px;
+	}
+}
+
+.hero-container {
+	perspective: 600px;
+	width: 1128px;
+
+	@include d {
+		width: 100%;
+	}
+
+	.hero-image {
+		display: none;
+
+		&.show {
+			display: block;
+			animation: slide-up 0.5s ease;
+		}
+	}
+
+	.hero-tab {
+		border: 1px solid transparent;
+		transition: 0.25s all ease;
+		font-size: 10px;
+
+		&:hover {
+			color: #295dfb;
+
+			.hero-tab-icon {
+				display: none;
+			}
+
+			.hero-tab-icon-active {
+				display: block;
+			}
+		}
+
+		&.active {
+			border: #98bdff 1px solid;
+			border-radius: 8px;
+			background: #eef4ff;
+			color: #295dfb;
+
+			.hero-tab-icon {
+				display: none;
+			}
+
+			.hero-tab-icon-active {
+				display: block;
+			}
+		}
+
+		.hero-tab-icon {
+			display: block;
+		}
+
+		.hero-tab-icon-active {
+			display: none;
+		}
+	}
+}
+
+.hover-element {
+	cursor: none;
+
+	&:hover {
+		.custom-cursor {
+			display: block;
+		}
+
+		.user-cursor {
+			transition: all 0.25s ease;
+		}
+
+		.user-cursor:hover {
+			transform: scale(1.05);
+		}
+	}
+
+	.custom-cursor {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 19px;
+		height: 20px;
+		pointer-events: none;
+		z-index: 9999;
+		background-image: url("/themes/writerzen/img/icon/cursor.png");
+		background-size: cover;
+		background-position: center;
+		display: none;
+	}
+}
+
+.workflow-tab {
+	gap: 20px;
+	display: flex;
+	justify-content: center;
+
+	.item {
+		cursor: pointer;
+		border-radius: 30px;
+		border: 1.5px solid var(--primary-middle, #e4ecfa);
+		padding: 10px 20px;
+		color: #5b6fa3;
+
+		&.active {
+			color: #292929;
+			background: #d4e3fe;
+		}
+	}
+}
+
+.logos-wrapper {
+	flex: none;
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+	gap: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+	animation: logoloop 60s linear infinite;
+
+	&.reverse {
+		animation-direction: reverse;
+	}
+}
+
+.progress-container {
+	right: -20px;
+	top: calc(50% - 150px);
+	background: #d4e3fe;
+	width: 2px;
+	height: 300px;
+	transition: 0.4s all ease;
+	border-radius: 4px;
+
+	@include t {
+		height: 250px;
+		right: 0;
+		top: 50px;
+	}
+
+	.progress-bar {
+		width: 100%;
+		transition: all 0.25s ease;
+		border-radius: 4px;
+
+		@include t {
+			height: 100%;
+		}
+	}
+}
+
+.workflow-container {
+	height: fit-content;
+	.workflow-item {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		@include s {
+			padding-right: 10px;
+		}
+
+		&.show {
+			opacity: 1;
+			transform: translateY(0) translateZ(0) scale(1);
+			animation: slide-scale-up 1s ease;
+		}
+
+		&.hide {
+			opacity: 0;
+			animation: slide-scale-down 1s ease;
+			transform: translateY(100px) translateZ(-100px) scale(0.8);
+		}
+	}
+
+	.workflow-item-text,
+	.workflow-item-visual {
+		perspective: 600px;
+		line-height: 160%;
+	}
+	.workflow-item-visual {
+		height: 360px;
+		@include t {
+			margin: 20px auto 0 !important;
+			height: 400px;
+		}
+		@include m {
+			height: 380px;
+		}
+		@include s {
+			height: 240px;
+		}
+
+	}
+	.workflow-item-text {
+		@include t {
+			height: 150px;
+		}
+		@include m {
+			height: 220px;
+			&[data-workflow-container="execution"] {
+				height: 320px;
+			}
+			&[data-workflow-container="research"] {
+				height: 280px;
+			}
+		}
+	}
+
+	.accordion-custom {
+		.item {
+			overflow: hidden;
+
+			.item-heading {
+				cursor: pointer;
+			}
+
+			.item-body {
+				line-height: 42px;
+				transition: all 0.2s ease;
+				height: 0;
+			}
+
+			&.active {
+				.item-body {
+					height: 222px;
+				}
+
+				.item-heading i {
+					transform: rotate(180deg);
+					transition: all 0.5s ease;
+				}
+			}
+		}
+		.progress-bar {
+			height: 3px;
+			background-color: #d4e3fe;
+		}
+
+		.progress {
+			height: 100%;
+			background-color: #295dfb;
+			transition: width 0.1s;
+		}
+	}
+}

@@ -1,0 +1,86 @@
+.contact {
+    position: relative;
+    padding-top: 42px;
+
+    &__preview {
+      margin-left: -15px;
+      @include t {
+        margin-left: 0;
+      }
+      img {
+        width: 100%;
+      }
+      &:not(:first-child) {
+        position: absolute;
+      }
+    }
+    &__wrap {
+      max-width: 545px;
+      margin-left: auto;
+    }
+    &__title {
+      margin-bottom: 12px;
+      margin-top: 32px;
+      &.d5 {
+        @include m {
+          font-size: 36px;
+          line-height: 47.88px;
+        }
+      }
+    }
+    &__info {
+      margin-bottom: 48px;
+      color: #6E757C;
+    }
+    &:not(:last-child) {
+      margin-bottom: 136px;
+    }
+  }
+  .field:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .field__label {
+    margin-bottom: 16px;
+    color: #000;
+  }
+  .field__input {
+    width: 100%;
+    border-radius: 16px;
+    background: #ffffff;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4F4F4F;
+  }
+  .field__textarea {
+    width: 100%;
+    border-radius: 16px;
+    background: #ffffff;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4F4F4F;
+    font-weight: 400;
+  }
+  .field__input::-webkit-input-placeholder,
+  .field__textarea::-webkit-input-placeholder,
+  .field__input::-ms-input-placeholder,
+  .field__textarea::-ms-input-placeholder,
+  .field__input::placeholder {
+    color: #4F4F4F;
+    opacity: .7;
+  }
+  .field__textarea::placeholder {
+    color: #4F4F4F;
+    opacity: .7;
+    font-weight: 400;
+  }
+  .field__input {
+    height: 68px;
+    padding: 20px 24px;
+  }
+  .field__textarea {
+    height: 160px;
+    padding: 20px 24px;
+    resize: none;
+  }

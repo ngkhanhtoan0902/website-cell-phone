@@ -1,0 +1,247 @@
+/* Text */
+$text: $black;
+$textSecondary: $secondary;
+$textPrimary: $primary;
+$textPrimaryMedium: $primary-medium;
+$textSuccess: $success;
+$textWarning: $warning;
+$textDanger: $danger;
+$textGray: $gray;
+
+$fontWeightLight: 300;
+$fontWeightNormal: 400;
+$fontWeightMedium: 500;
+$fontWeightSemiBold: 600;
+$fontWeightBold: 700;
+$fontWeightBlack: 900;
+
+$line-height: 1.6;
+
+@for $i from 8 through 35 {
+    .fs-#{$i} {
+        font-size: #{$i}px !important;
+    }
+}
+
+.h0 {
+	font-size: 64px;
+	font-weight: 700;
+	line-height: 77px;
+	letter-spacing: -0.05em;
+
+	@include s {
+		font-size: 34px;
+		line-height: 40.8px;
+	}
+}
+
+.h1 {
+	font-size: 64px;
+	line-height: 80px;
+	font-weight: bold;
+
+	@include m {
+		font-size: 32px;
+		line-height: 48px;
+	}
+}
+
+.h2 {
+	font-size: 48px;
+	line-height: 64px;
+	font-weight: bold;
+	@include a {
+		font-size: 32px;
+		line-height: 42px;
+	}
+}
+
+.h3 {
+	font-size: 32px;
+	line-height: 40px;
+	font-weight: 700;
+
+	@include t {
+		font-size: px;
+		line-height: 32px;
+	}
+}
+
+.h4 {
+	font-size: 24px;
+	line-height: 40px;
+	font-weight: bold;
+}
+
+.h5 {
+	font-size: 20px;
+	line-height: 32px;
+	font-weight: bold;
+
+	@include s {
+		font-size: 18px;
+		line-height: 28px;
+	}
+}
+
+.h6 {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400; 
+	@include s {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+
+
+.h7 {
+	font-size: 16px;
+	line-height: 28px;
+	font-weight: 400;
+}
+
+.h8 {
+	font-size: 16px;
+	line-height: 25.6px;
+	font-weight: 400;
+}
+
+.h9 {
+	font-size: 14px;
+	line-height: 22.4px;
+	font-weight: 400;
+}
+
+.h10 {
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: 400;
+}
+
+.d1 {
+	font-size: 72px;
+	line-height: 1.6;
+	font-weight: 600;
+}
+
+.d2 {
+	font-size: 64px;
+	line-height: 76.8px;
+	font-weight: 700;
+}
+
+.d3 {
+	font-size: 64px;
+	line-height: 1.6;
+	font-weight: 600;
+}
+
+.d4 {
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 56px;
+	color: $black !important;
+
+	@include s {
+		font-size: 22px;
+	}
+}
+
+.d5 {
+	font-size: 50px;
+	font-weight: 700;
+	line-height: 66.5px;
+
+	@include m {
+		font-size: 34px;
+		line-height: 38.4px;
+	}
+}
+
+.d6 {
+	font-size: 33px;
+	line-height: 50px;
+
+	@include m {
+		font-size: 24px;
+		line-height: 36px;
+	}
+}
+
+.d7 {
+	font-size: 24px;
+
+	@include m {
+		font-size: 20px;
+	}
+}
+
+a {
+    color: $textPrimary;
+    &:hover {
+        text-decoration: none;
+    }
+    
+    &.text-secondary {
+        &:hover {
+            color: $textPrimary !important;
+        }
+    }
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+.fw-normal {
+    font-weight: $fontWeightNormal !important;
+}
+
+.fw-medium {
+    font-weight: $fontWeightMedium !important;
+}
+
+.fw-semibold {
+    font-weight: $fontWeightSemiBold !important;
+}
+
+.fw-bold {
+    font-weight: $fontWeightBold !important;
+}
+
+.fw-black {
+    font-weight: $fontWeightBlack !important;
+}
+
+.text-primary {
+    color: $textPrimary !important;
+}
+
+.text-primary-medium {
+    color: $textPrimaryMedium !important;
+}
+
+.text-success {
+    color: $textSuccess !important;
+}
+
+.text-warning {
+    color: $textWarning !important;
+}
+
+.text-danger {
+    color: $textDanger !important;
+}
+
+.text-secondary {
+    color: $textSecondary !important;
+}
+
+.text-gray {
+    color: $gray !important;
+}
+
+.text-normal {
+    color: $text !important;
+}

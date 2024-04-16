@@ -1,0 +1,64 @@
+.case {
+    &__study {
+      height: 350px;
+      border-radius: 30px;
+      margin-bottom: 227px;
+    }
+    &__review {
+      max-width: 548px;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      top: 90px;
+      font-size: 24px;
+      line-height: 33.6px;
+      color: #000000;
+      box-shadow: 0px 10px 40px rgba(4, 5, 5, 0.15);
+      z-index: 2;
+
+      @include m {
+        bottom: -117px;
+        font-size: 16px;
+      }
+    }
+    &__brand img {
+      opacity: 0.5;
+      filter: grayscale(100%);
+    }
+    &__preview {
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      border-radius: 30px;
+    }
+    &__bgcolor {
+      -webkit-clip-path: polygon(0 0, 95% 0, 77% 100%, 0% 100%);
+      clip-path: polygon(0 0, 95% 0, 77% 100%, 0% 100%);
+      z-index: 1;
+      top: 0;
+      left: 0;
+    }
+    &__bgimg {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-position: center;
+      background-size: cover;
+      opacity: 0.7;
+      background-color: #fff;
+    }
+    &__imgdetail {
+      background: #F5F6FD;
+      box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      text-align: center;
+    }
+    & .h2 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+    & .h5 {
+      font-weight: 400;
+      line-height: 28.8px;
+    }
+}

@@ -1,0 +1,300 @@
+.header {
+	position: fixed;
+	left: 0;
+	top: 90px;
+	z-index: 999;
+	transition: 0.15s all ease;
+
+	@include m {
+		top: 68px;
+	}
+
+	@include d {
+		padding: 0 20px;
+	}
+
+	&.sticky {
+		top: 0;
+
+		.header__center {
+			border-radius: 0;
+			max-width: 100%;
+
+			@include d {
+				margin: 0 -20px;
+				max-width: unset;
+			}
+
+			.header__btns {
+				.btn {
+					border-radius: 0 !important;
+				}
+			}
+		}
+	}
+
+	&__center {
+		border-radius: 20px;
+		max-width: 1120px;
+		margin: 0 auto;
+		height: 68px;
+		box-shadow: 0px 3px 20px rgb(91 111 163 / 11%);
+		// animation: slide-up 0.4s;
+		// transform: translateY(0);
+		background: $white;
+
+		.header__btns {
+			.btn {
+				border-radius: 8px !important;
+			}
+			.nav-link{
+				color: #212b36;
+			}
+		}
+		.header__nav {
+			.nav-item {
+				.nav-link {
+					color: #212b36;
+				}
+			}
+		}
+
+		// &.sticky {
+		// 	border-radius: 0;
+		// 	max-width: 100%;
+		// 	// transform: translateY(0);
+		// 	// animation: slide-down 0.4s;
+
+		// 	@include d {
+		// 		margin: 0 -20px;
+		// 		max-width: unset;
+		// 	}
+
+		// 	.header__btns  {
+		// 		.btn {
+		// 			border-radius: 0 !important;
+		// 		}
+		// 	}
+		// }
+
+		ul li {
+			cursor: pointer;
+
+			&:hover {
+				span {
+					color: $primary !important;
+				}
+
+				ul {
+					visibility: visible;
+					opacity: 1;
+					animation: slide-up 0.25s ease;
+					transition: opacity 0.2s linear;
+					z-index: 999;
+				}
+			}
+		}
+
+		li ul {
+			width: 313px;
+			top: 55px;
+			left: 0;
+			box-shadow: -6px 6px 20px rgb(91 111 163 / 15%);
+			border-radius: 10px;
+			padding: 20px;
+			opacity: 0;
+			visibility: hidden;
+			transition:
+				visibility 0s 0.2s,
+				opacity 0.2s linear;
+		}
+
+		li {
+			a {
+				display: block;
+
+				.h7 {
+					line-height: 15px;
+					margin-bottom: 8px;
+
+					i {
+						opacity: 0;
+						transition: all ease 0.2s;
+					}
+				}
+
+				&:hover {
+					.h7 i {
+						opacity: 1;
+						transform: translateX(5px);
+					}
+				}
+			}
+		}
+	}
+
+	@keyframes slide-down {
+		0% {
+			transform: translateY(-126px);
+		}
+
+		100% {
+			transform: translateY(-68px);
+		}
+	}
+
+	@keyframes slide-up {
+		0% {
+			opacity: 0;
+			transform: translateY(68px);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	&__btn {
+		border-radius: 20px;
+		min-height: 76px;
+		width: 154px;
+
+		&:hover {
+			background: $primary-hover !important;
+		}
+
+		&:active {
+			background: $primary-active !important;
+		}
+	}
+}
+
+.nav__mobile {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #f6f9fa;
+	z-index: 999;
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	-webkit-overflow-scrolling: touch;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	li ul {
+		border-left: 1px solid #bfc7da;
+	}
+
+	@include t {
+		&.nav__active {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	.accordion-body {
+		padding: 20px 0;
+	}
+
+	.accordion-item {
+		border: #ffffff;
+		border-bottom: 1px solid #d4e3fe;
+	}
+
+	.accordion-button:not(.collapsed) {
+		background-color: unset;
+		box-shadow: inset 0 -1px 0 #d4e3fe;
+	}
+
+	.accordion-button:focus {
+		box-shadow: inset 0 -1px 0 #d4e3fe;
+	}
+}
+
+.dropdown-custom {
+	&.active {
+		.avatar-dropdown {
+			visibility: visible;
+			opacity: 1;
+			animation: slide-up 0.25s ease;
+			transition: opacity 0.2s linear;
+			z-index: 999;
+		}
+	}
+}
+
+.avatar-dropdown {
+	top: calc(100% + 10px);
+	right: 20px;
+	box-shadow: 0px 20px 20px rgba(91, 111, 163, 0.3);
+	border: 1px solid #bfc7da;
+	opacity: 0;
+	visibility: hidden;
+	transition:
+		visibility 0s 0.2s,
+		opacity 0.2s linear;
+}
+
+.custom-header-mobile {
+	transition: 0.25s all ease;
+	box-shadow: -6px 6px 20px rgba(91, 111, 163, 0.11);
+	background-color: #ffffff;
+	padding: 20px;
+	margin-top: 20px;
+	border-radius: 16px;
+	margin: 30px 20px 0;
+
+	&.full-width {
+		border-radius: 0;
+		margin: 0;
+	}
+}
+
+.message-trip-top {
+	transition: 0.15s all ease;
+	position: absolute;
+	top: 0;
+	z-index: 999;
+	font-size: 18px;
+	font-weight: 600;
+
+	@include s {
+		font-size: 12px;
+	}
+
+	&.sticky {
+		position: sticky;
+		top: 68px;
+	}
+
+	&-img {
+		height: 70px;
+		object-fit: cover;
+
+		@include a {
+			height: 50px;
+		}
+	}
+
+	&-title {
+		font-size: 18px;
+		font-weight: 700px;
+
+		@include m {
+			font-size: 13px;
+		}
+	}
+
+	&-block {
+		@include m {
+			display: block;
+		}
+	}
+}

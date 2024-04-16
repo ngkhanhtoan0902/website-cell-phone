@@ -1,0 +1,100 @@
+.footer {
+    .form-control {
+      height: 34px;
+      font-size: 14px;
+      line-height: 18px;
+      color: #292929;
+      border-color: #BDBDBD;
+    }
+    &__logo {
+      width: 237px;
+      display: block;
+    }
+    &__btn {
+      padding: 8px;
+      width: 80%;
+      float: right;
+      border: 1px solid rgba(91, 111, 163, 0.7);
+      box-sizing: border-box;
+      border-radius: 5px;
+      font-size: 16px;
+      line-height: 16px;
+      color: #5B6FA3;
+      background: transparent;
+
+      &:hover {
+        background: #5B6FA3;
+        color: #fff;
+      }
+      &:active {
+        background: #2D3D75;
+      }
+    }
+    &__textinfo_social {
+      // 
+      font-size: 20px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      // background: #5B6FA3;
+      color: $black;
+      &:hover {
+        // background: #42548C;
+      }
+      &:active {
+        // background: #2D3D75;
+      }
+    }
+    &__textinfo_icon i {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 16px;
+      color: #BFC7DA;
+    }
+    &__heading {
+      height: 64px;
+      color: #000;
+      min-width: 100px;
+    }
+    &__item {
+      min-height: fit-content;
+    }
+    &__link {
+      color: $black;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+
+      &:active {
+        color: #1434B4;
+      }
+    }
+    &__line {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+    &__bottom {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 24px 0;
+      border-top: 2px solid rgba(116, 143, 181, 0.15);
+      height: 90px;
+      @include m {
+        height: 0;
+        padding: 20px;
+      }
+    }
+    &__copyright {
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 24px;
+      color: #828282;
+    }
+  }

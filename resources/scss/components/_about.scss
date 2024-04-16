@@ -1,0 +1,185 @@
+.about {
+    .circle-decor {
+        width: 200px;
+        height: 200px;
+        filter: blur(137px);
+        background: #295DFB;
+        border-radius: 50%;
+    }
+    @media only screen and (max-width: 992px) {
+        .circle-decor {
+            width: 150px !important;
+            height: 150px !important;
+            right: 0 !important;
+        }
+    }
+    #newsletter-hubspot input[type='submit'] {
+        border: 2px solid #fff
+    }
+    #newsletter-hubspot {
+        color: #fff
+    }
+
+    #section-1 {
+        .section-1-text {
+            transition: 1s all ease;
+            transform: translateY(50%);
+            opacity: 0;
+        }
+        .section-1-graphic {
+            transition: 1s all ease;
+            transform: scale(2);
+            opacity: 0;
+        }
+        &.enter {
+            .section-1-text {
+                transform: translateY(0%);
+                opacity: 1;
+            }
+            .section-1-graphic {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        &.leave {
+            .section-1-text {
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+            .section-1-graphic {
+                transform: scale(3);
+                opacity: 0;
+            }
+        }
+    }
+
+    #section-2 {
+        transition: 1s all ease;
+        transform: translateY(50%) scale(.4);
+        opacity: 0;
+        &.enter {
+            transform: translateY(0%) scale(1);
+            opacity: 1;
+        }
+        &.leave {
+            transform: translateY(-50%) scale(1);
+            opacity: 0;
+        }
+    }
+
+    #section-3 {
+        .section-3-graphic-1 {
+            transition: 1s all ease;
+            transform: scale(.4);
+            opacity: 0;
+        }
+        .section-3-graphic-2 {
+            transition: 1s all ease;
+            opacity: 0;
+        }
+        .section-3-text {
+            transition: 1s all ease;
+            opacity: 0;
+        }
+        .circle-decor {
+            transition: 1s all ease;
+            opacity: 0;
+        }
+        &.enter {
+            .section-3-graphic-1 {
+                transform: scale(1);
+                opacity: 1;
+            }
+            .section-3-graphic-2 {
+                opacity: 1;
+            }
+            .section-3-text {
+                opacity: 1;
+            }
+            .circle-decor {
+                opacity: 1;
+            }
+        }
+        &.leave {
+            .section-3-graphic-1 {
+                transform: scale(2);
+                opacity: 0;
+            }
+            .section-3-graphic-2 {
+                opacity: 0;
+            }
+            .section-3-text {
+                opacity: 0;
+            }
+            .circle-decor {
+                opacity: 0;
+            }
+        }
+    }
+
+    #section-4 {
+        .section-4-circle {
+            transition: 1s all ease;
+            transform: scale(.4);
+            opacity: 0;
+        }
+        .section-4-content {
+            transition: 1s all ease;
+            transform: translateY(50%);
+            opacity: 0;
+        }
+        &.enter {
+            .section-4-circle {
+                transform: scale(1);
+                opacity: 1;
+            }
+            .section-4-content {
+                transform: translateY(0%);
+                opacity: 1;
+            }
+        }
+        &.leave {
+            .section-4-circle {
+                transform: scale(2);
+                opacity: 0;
+            }
+            .section-4-content {
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+        }
+    }
+
+    #section-5 {
+        transition: 1s all ease;
+        transform: scale(2);
+        opacity: 0;
+        &.enter {
+            transform: scale(1);
+            opacity: 1;
+        }
+        &.leave {
+            transform: scale(1) translateY(-50%);
+            opacity: 0;
+        }
+    }
+
+    #section-6 {
+        transition: 1s all ease;
+        opacity: 0;
+        &.enter {
+            opacity: 1;
+        }
+        &.leave {
+            opacity: 0;
+        }
+    }
+}
+#about section {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1 !important;
+}

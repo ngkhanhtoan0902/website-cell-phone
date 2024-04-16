@@ -1,0 +1,302 @@
+.blog {
+	font-size: 16px;
+
+	&__item {
+		transition: 0.25s all ease;
+		animation: blog-item .5s ease;
+
+		&:hover {
+			box-shadow: -6px 6px 20px 0px rgba(91, 111, 163, 0.15);
+		}
+	}
+
+	&__title {
+		font-size: 32px;
+		line-height: 44.8px;
+		font-weight: 600;
+		color: $black;
+		min-height: 89.6px;
+	}
+
+	&__preview {
+		min-height: 276px;
+		background-position: center;
+		background-size: cover;
+		background-color: #c4c4c4;
+	}
+
+	&__label {
+		width: fit-content;
+		padding: 5px;
+		border-radius: 5px;
+		font-weight: 600;
+		font-size: 10px;
+	}
+
+	&__tag {
+		display: flex;
+		align-items: center;
+		width: fit-content;
+		padding: 5px;
+		border-radius: 5px;
+		line-height: 1;
+		font-weight: 600;
+		font-size: 12px;
+		background-color: $primary-medium;
+		color: $white;
+		cursor: pointer;
+		text-transform: uppercase;
+
+		&.active {
+			background-color: $primary;
+		}
+
+		&:hover {
+			background-color: $primary;
+		}
+
+		&.static {
+			cursor: auto;
+
+			&:hover {
+				background-color: $primary-medium;
+			}
+		}
+	}
+
+	&__tag__static {
+		width: fit-content;
+		padding: 5px;
+		border-radius: 5px;
+		line-height: 1;
+		font-weight: 600;
+		font-size: 12px;
+		background-color: $primary-medium;
+		color: $white;
+		text-transform: uppercase;
+	}
+
+	&__breadcrumb {
+		@include m {
+			display: none;
+		}
+	}
+
+	.owl-carousel .owl-stage {
+		align-items: stretch;
+	}
+
+	.outline {
+		.outline-mobile {
+			display: none;
+
+			@include lg {
+				display: block;
+			}
+
+			max-height: 0;
+			overflow: hidden;
+			transition: all ease 2.5s;
+
+			&.active {
+				max-height: fit-content;
+			}
+		}
+	
+		&-item {
+			&.active {
+				opacity: 1;
+			}
+		}
+
+		a {
+			opacity: 0.5;
+
+			&:hover {
+				color: $black;
+				opacity: 1;
+			}
+		}
+	}
+
+
+
+	&__item-hover {
+		cursor: pointer;
+
+		&:hover {
+			background-color: #FFFFFF;
+			box-shadow: -6px 6px 20px 0px #5B6FA326;
+		}
+	}
+}
+
+article {
+
+	p,
+	span,
+	ul,
+	li,
+	ol {
+		font-size: 18px;
+		line-height: 28.8px;
+		margin-bottom: 25px;
+	}
+
+	h1,
+	h2,
+	h3 {
+		margin: 44px 0 28px;
+		font-weight: 600;
+	}
+
+	ul,
+	ol {
+		margin-left: 20px;
+		list-style: disc;
+	}
+
+	strong {
+		font-weight: 600;
+	}
+}
+
+.ctr-ifomation {
+	li {
+		padding: 10px;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 0;
+	}
+}
+
+.ctr-ifomation {
+	li:nth-child(even) {
+		background: #eff5ff;
+	}
+}
+
+.ctr-ifomation {
+	li {
+		span {
+			font-size: 14px;
+			line-height: 25px;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.ctr-container.active {
+	border: 1px solid #295dfb;
+	box-shadow: -6px 6px 20px rgba(91, 111, 163, 0.15);
+}
+
+#selec-box {
+	position: sticky;
+	top: 65px;
+
+	@include d {
+		position: static;
+	}
+}
+
+.search-popup {
+	background: linear-gradient(180deg, #7e9eff 63.02%, rgba(41, 93, 251, 0) 100%);
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-height: 486px;
+	width: 100%;
+	z-index: 999;
+	transition: 0.3s all ease;
+	animation: search-popup-in 0.8s ease;
+	transform: translateY(0%);
+	opacity: 1;
+
+	&.hide {
+		transform: translateY(-100%);
+		opacity: 0;
+		animation: search-popup-out 0.8s ease;
+	}
+
+	.btn-circle-outline {
+		border-color: $white;
+		color: $white;
+		float: right;
+
+		&:hover {
+			color: #7e9eff;
+			background: $white;
+		}
+	}
+}
+
+@keyframes search-popup-in {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes search-popup-out {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes blog-item {
+	0% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.content-container {
+	word-wrap: break-word;
+}
+
+.category__tag {
+	width: fit-content;
+	padding: 5px;
+	border-radius: 5px;
+	line-height: 1;
+	font-weight: 600;
+	font-size: 12px;
+	background-color: $primary-medium;
+	color: $white;
+	cursor: pointer;
+	text-transform: uppercase;
+
+	&.active {
+		background-color: $secondary;
+	}
+
+	&:hover {
+		background-color: $secondary;
+	}
+}
+
+.category__tag__static {
+	width: fit-content;
+	padding: 5px;
+	border-radius: 5px;
+	line-height: 1;
+	font-weight: 600;
+	font-size: 12px;
+	background-color: $primary-medium;
+	color: $white;
+	cursor: pointer;
+	text-transform: uppercase;
+}

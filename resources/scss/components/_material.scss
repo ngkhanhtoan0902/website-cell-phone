@@ -1,0 +1,69 @@
+.material {
+	.ebook-item {
+		box-shadow: -6px 6px 20px 0px rgba(91, 111, 163, 0.15);
+		transition: all 0.25s ease;
+		&:hover {
+			box-shadow: 0px 20px 20px 0px rgba(91, 111, 163, 0.3);
+		}
+		&-banner {
+			padding: 10px 70px;
+			@include m {
+				padding: 20px;
+			}
+		}
+	}
+	.thank-you-free {
+		padding-top: 60px;
+		padding-bottom: 80px;
+		@include m {
+			padding-top: 40px;
+			padding-bottom: 60px;
+		}
+	}
+
+	.thank-you-content {
+		padding-top: 80px;
+		padding-bottom: 40px;
+		@include m {
+			padding-top: 60px;
+			padding-bottom: 30px;
+		}
+	}
+
+	.thank-you-related {
+		padding-top: 40px;
+		padding-bottom: 80px;
+		@include m {
+			padding-top: 30px;
+			padding-bottom: 60px;
+		}
+	}
+
+	.thank-you-related .thank-you-related-spacing {
+		padding-top: 40px;
+		@include m {
+			padding-top: 20px;
+		}
+	}
+
+	.thank-you-read {
+		margin-bottom: 40px;
+		@include m {
+			margin-bottom: 20px;
+		}
+	}
+
+	.thanks-message-container {
+		display: none;
+	}
+
+	.thanks-message-container.show {
+		display: block;
+		transform: translateY(0);
+		animation: slide-up 0.25s ease;
+	}
+	
+	#blog-container .owl-carousel .owl-stage {
+		align-items: stretch;
+	}
+}

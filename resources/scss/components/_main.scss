@@ -1,0 +1,85 @@
+.main {
+    &__bg {
+      width: 100%;
+      perspective: 600px;
+      @include t {
+        width: 90%;
+      }
+    }
+    &__preview {
+      width: fit-content;
+    }
+    &__title {
+      font-size: 54px;
+      font-weight: 700;
+      line-height: 64.8px;
+      letter-spacing: -0.02em;
+    }
+  }
+  #home {
+    .main_slide {
+      perspective: 600px;
+      height: 540px;
+      @include m {
+        height: 290px;
+      }
+      @include s {
+        height: 140px;
+      }
+      @include a {
+        height: 198px;
+      }
+    }
+    .main__wrap {
+      max-width: 100%;
+    }
+    .main__bg {
+      img:first-child {
+        transform: rotateX(9deg);
+        box-shadow: 0px 20px 30px 0px rgb(91 111 163 / 30%);
+        transition: all .8s ease !important;
+      }
+      img:nth-child(2) {
+        transform: rotateX(8deg) translateY(-12%);
+        box-shadow: 0px 0px 30px 10px rgba(91, 111, 163, 0.5);
+        left: calc(50% - 864px/2);
+        top: calc(50% - 486px/2);
+        transition: all .8s ease !important;
+        @include t {
+          left: 5%;
+          width: 90%;
+          top: 0;
+        }
+      }
+      img:nth-child(3) {
+        transform: rotateX(7deg) translateY(-22%);
+        left: calc(50% - 864px/2);
+        top: calc(50% - 486px/2);
+        transition: all .8s ease !important;
+        @include t {
+          left: 5%;
+          width: 90%;
+          top: 0;
+        }
+      }
+    }
+    .main__title span {
+      @include m {
+        display: block;
+      }
+    }
+  }
+  #product {
+    .main {
+      margin-top: 120px;
+      @include t {
+        margin-top: 0;
+      }
+      &__wrap {
+        max-width: 800px;
+      }
+      &__text {
+        font-size: 18px !important;
+      }
+    }
+  }

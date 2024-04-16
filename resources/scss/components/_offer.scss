@@ -1,0 +1,77 @@
+.offer {
+    &__center {
+      border-radius: 30px;
+      box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.1);
+      min-height: 329px;
+      padding: 70px 81px;
+      @include m {
+        padding: 40px 20px !important;
+      }
+    }
+    &__wrap {
+      max-width: 540px;
+    }
+    &__input {
+      height: 57px;
+      max-width: 260px;
+      border: 2px solid #BFC7DA;
+      border-radius: 10px;
+      padding: 16px 24px;
+      font-size: 16px;
+      color: #BFC7DA;
+      background-color: transparent !important;
+      @include t {
+        margin: 0 auto;
+      }
+      &::placehoder {
+        color: $primary-medium;
+      }
+    }
+    &__btn {
+      height: 57px;
+      border-radius: 16px !important;
+      padding: 0 24px;
+      width: fit-content;
+      @include t {
+        margin: 0 auto;
+      }
+    }
+    &__text {
+      max-width: 530px;
+      color: #292929;
+      @include t {
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+    &__title {
+      font-size: 36px;
+      line-height: 46.55px;
+      margin-bottom: 25px;
+      font-weight: 700;
+      color: $black;
+      @include t {
+        font-size: 26px;
+        line-height: 42px;
+        text-align: center;
+      }
+    }
+    input::placeholder {
+      color: #BFC7DA;
+    }
+  }
+  #product {
+    .offer__center {
+      padding: 22px 70px;
+    }
+  }
+  #testimonial {
+    .offer__center {
+      padding: 22px 70px;
+    }
+  }
+  #affiliate {
+    .offer__center {
+      padding: 33px 120px 38px 100px;
+    }
+  }
